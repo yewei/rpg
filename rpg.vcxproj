@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\font.h" />
+    <ClInclude Include="include\game.h" />
+    <ClInclude Include="include\gb2312_to_Unicode.h" />
+    <ClInclude Include="include\GUI.h" />
+    <ClInclude Include="include\RPG_AI.h" />
+    <ClInclude Include="include\RPG_Config.h" />
+    <ClInclude Include="include\RPG_DialogSystem.h" />
+    <ClInclude Include="include\RPG_EquipmentSystem.h" />
+    <ClInclude Include="include\RPG_EventManager.h" />
+    <ClInclude Include="include\RPG_FightSystem.h" />
+    <ClInclude Include="include\RPG_FindPath.h" />
+    <ClInclude Include="include\RPG_Image.h" />
+    <ClInclude Include="include\RPG_LearnMagic.h" />
+    <ClInclude Include="include\RPG_Map.h" />
+    <ClInclude Include="include\RPG_MapRender.h" />
+    <ClInclude Include="include\RPG_MenuSurface.h" />
+    <ClInclude Include="include\RPG_MixSound.h" />
+    <ClInclude Include="include\RPG_NPC.h" />
+    <ClInclude Include="include\RPG_RenderEngine.h" />
+    <ClInclude Include="include\RPG_SceneManager.h" />
+    <ClInclude Include="include\RPG_ShopingSystem.h" />
+    <ClInclude Include="include\RPG_SoundManager.h" />
+    <ClInclude Include="include\RPG_SpriteManager.h" />
+    <ClInclude Include="include\RPG_TaskSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\font.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\gb2312_to_Unicode.cpp" />
+    <ClCompile Include="src\GUI.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\RPG_AI.cpp" />
+    <ClCompile Include="src\RPG_Config.cpp" />
+    <ClCompile Include="src\RPG_DialogSystem.cpp" />
+    <ClCompile Include="src\RPG_EquipmentSystem.cpp" />
+    <ClCompile Include="src\RPG_EventManager.cpp" />
+    <ClCompile Include="src\RPG_FightSystem.cpp" />
+    <ClCompile Include="src\RPG_FindPath.cpp" />
+    <ClCompile Include="src\RPG_Image.cpp" />
+    <ClCompile Include="src\RPG_LearnMagic.cpp" />
+    <ClCompile Include="src\RPG_Map.cpp" />
+    <ClCompile Include="src\RPG_MapRender.cpp" />
+    <ClCompile Include="src\RPG_MenuSurface.cpp" />
+    <ClCompile Include="src\RPG_MixSound.cpp" />
+    <ClCompile Include="src\RPG_NPC.cpp" />
+    <ClCompile Include="src\RPG_RenderEngine.cpp" />
+    <ClCompile Include="src\RPG_SceneManager.cpp" />
+    <ClCompile Include="src\RPG_ShopingSystem.cpp" />
+    <ClCompile Include="src\RPG_SoundManager.cpp" />
+    <ClCompile Include="src\RPG_SpriteManager.cpp" />
+    <ClCompile Include="src\RPG_TaskSystem.cpp" />
+    <ClCompile Include="src\story.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{42ABD4E2-19C5-41F2-AA96-55DC2649D69B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>rpg</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <ReferencePath>$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;SDL.lib;SDLmain.lib;SDL_image.lib;iconv.lib;SDL_ttf.lib;SDL_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
